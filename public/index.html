@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASD Workshop API</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            color: #0070f3;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .endpoint {
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 3px solid #0070f3;
+        }
+    </style>
+</head>
+<body>
+    <h1>ASD Workshop API</h1>
+    <p>Welcome to the ASD Workshop API. This API provides endpoints for managing products.</p>
+    
+    <h2>Available Endpoints</h2>
+    
+    <div class="endpoint">
+        <strong>GET /products</strong><br>
+        Get all products
+    </div>
+    
+    <div class="endpoint">
+        <strong>GET /products/:id</strong><br>
+        Get a specific product by ID
+    </div>
+    
+    <div class="endpoint">
+        <strong>POST /products</strong><br>
+        Add a new product
+    </div>
+    
+    <div class="endpoint">
+        <strong>PUT /products/:id</strong><br>
+        Update a product
+    </div>
+    
+    <div class="endpoint">
+        <strong>PATCH /products/:id</strong><br>
+        Partially update a product
+    </div>
+    
+    <div class="endpoint">
+        <strong>DELETE /products/:id</strong><br>
+        Delete a product
+    </div>
+
+    <script type="module">
+        import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1/dist/index.mjs';
+        injectSpeedInsights();
+    </script>
+</body>
+</html>
