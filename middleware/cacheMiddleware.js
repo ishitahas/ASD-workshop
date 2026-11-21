@@ -22,10 +22,13 @@ function cacheMiddleware(req, res, next) {
     const originalJson = res.json.bind(res);
 
     res.json = (data) => {
-        cache[key] = {
-            data: data,
-            createdAt: Date.now()
-        };
+        // Cache only successful responses
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+            cache[key] = {
+                data,
+                createdAt: Date.now()
+            };
+        }
 
         return originalJson(data);
     };

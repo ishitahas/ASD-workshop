@@ -1,18 +1,27 @@
 {
   "name": "asd-workshop",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "RESTful Product Management API built with Express.js, JSON file storage, and caching",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "test": "jest --runInBand",
+    "server": "node --watch server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest-api",
+    "crud",
+    "caching"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.2.1",
-    "nodemon": "^3.1.14"
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.3.2"
   }
 }

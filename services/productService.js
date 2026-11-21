@@ -12,6 +12,10 @@ async function addProduct(product) {
     return await productDatabase.addProduct(product);
 }
 
+async function replaceProduct(id, data) {
+    return await productDatabase.replaceProduct(id, data);
+}
+
 async function updateProduct(id, data) {
     return await productDatabase.updateProduct(id, data);
 }
@@ -24,6 +28,7 @@ module.exports = {
     getProducts,
     getProductById,
     addProduct,
+    replaceProduct,
     updateProduct,
     deleteProduct
 };
